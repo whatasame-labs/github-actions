@@ -1,0 +1,20 @@
+enable:
+  issues: true
+  prs: true
+
+labels:
+  'feature':
+    include:
+      - '^feat:'
+  'fix':
+    include:
+      - '^fix:'
+  'refactor':
+    include:
+      - '^refactor:'
+  'test':
+    include:
+      - '^test:'
+  'documentation':
+    include:
+      - '^docs:'
