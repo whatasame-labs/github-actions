@@ -1,0 +1,23 @@
+name: Hello TypeScript Action
+
+on: [push]
+
+jobs:
+  hello-ts-action:
+    name: Run hello-ts-action application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+        
+      - name: Run hello-ts-action
+        id: test-action
+        uses: whatasame-labs/hello-ts-action@v1 # Commit with the `v1` tag
+        with:
+          milliseconds: 1000
+          who-to-greet: 'whatasame' # Insert target name
+    
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.test-action.outputs.time }}"
