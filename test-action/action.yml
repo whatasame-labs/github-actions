@@ -18,7 +18,5 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: |
-        echo "Hello ${{ inputs.name }}!"
-        echo "You are ${{ inputs.age }} years old."
+    - run: ./a.sh
       shell: bash
