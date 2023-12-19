@@ -1,0 +1,24 @@
+name: "Test Action"
+description: "Test Action"
+author: "whatasame"
+
+branding:
+  icon: "heart"
+  color: "red"
+
+inputs:
+  name:
+    description: "Who to greet"
+    required: true
+  age:
+    description: "Age of the person to greet"
+    required: false
+    default: 18  
+
+runs:
+  using: composite
+  steps:
+    - run: |
+        echo "Hello ${{ inputs.name }}!"
+        echo "You are ${{ inputs.age }} years old."
+      shell: bash
