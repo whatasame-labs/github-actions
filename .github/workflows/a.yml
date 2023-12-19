@@ -16,4 +16,5 @@ jobs:
       uses: ./test-action
       with:
         name: test
+        age: ${{secret.TEST_SECRET}}
           
