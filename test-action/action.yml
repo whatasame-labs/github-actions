@@ -18,5 +18,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: ./test-action/a.sh
-      shell: bash
+    - run: |
+      chmod +x ./test-action/a.sh
+      ./test-action/a.sh
+    shell: bash
