@@ -17,4 +17,4 @@ inputs:
 
 runs:
   using: node20
-  main: "test-action/index.js"
+  main: "index.js"
