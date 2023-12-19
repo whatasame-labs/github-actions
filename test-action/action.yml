@@ -16,7 +16,5 @@ inputs:
     default: 18  
 
 runs:
-  using: composite
-  steps:
-    - run: chmod +x ./test-action/a.sh && ./test-action/a.sh
-      shell: bash
+  using: node20
+  main: "./test-action/index.js"
